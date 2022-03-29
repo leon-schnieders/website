@@ -26,7 +26,7 @@ jojojo
   
     var fetch_url: 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '6&lon=' + lon + '&appid=d1ffef114ff90bd71199fb1b8d279642';
   
-    fetch('https://api.openweathermap.org/data/2.5/weather?lat=51.481846&lon=7.216236&appid=d1ffef114ff90bd71199fb1b8d279642')
+    fetch(fetch_url)
     .then(response => {
       return response.json();
     })
