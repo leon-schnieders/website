@@ -1,17 +1,19 @@
 # website
 jojojo
 
-<h1> wuz up </h1>
+<h1> Wetter </h1>
+
+<p id="weather_text"></p>
 
 <script>
   console.log("Hello world");
   
+  var weather_p = document.getElementById("weather_text");
+  
   var weather_data;
   
-   
   function getWether(){  
-    console.log(weather_data);  
-    console.log(weather_data.base);  
+    weather_p.inner_HTML =  weather_data.toString();
   }
   
   fetch('https://api.openweathermap.org/data/2.5/weather?lat=51.481846&lon=7.216236&appid=d1ffef114ff90bd71199fb1b8d279642')
