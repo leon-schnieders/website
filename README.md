@@ -14,7 +14,7 @@ jojojo
   
   function getWether(){  
     var t = weather_p.visibility;
-    weather_p.inner_HTML =  t;
+    weather_p.innerHTML =  t;
   }
   
   fetch('https://api.openweathermap.org/data/2.5/weather?lat=51.481846&lon=7.216236&appid=d1ffef114ff90bd71199fb1b8d279642')
@@ -26,8 +26,7 @@ jojojo
     weather_data = users;
     getWether();
   });
-  
- console.log(weather_data);  
+   
   
   console.log("pass");
 </script>
