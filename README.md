@@ -24,6 +24,9 @@ jojojo
   
     var lon = 7.216236;
   
+    if( typeof my_lat !== "undefined") { lat = my_lat; }
+  
+    if( typeof my_lon !== "undefined") { lon = my_lon; }
   
     var fetch_url= 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '6&lon=' + lon + '&appid=d1ffef114ff90bd71199fb1b8d279642';
   
