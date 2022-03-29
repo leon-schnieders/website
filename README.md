@@ -10,8 +10,8 @@ jojojo
   
    
   function getWether(){  
-    console.log(users);  
-    console.log(users.base);  
+    console.log(weather_data);  
+    console.log(weather_data.base);  
   }
   
   fetch('https://api.openweathermap.org/data/2.5/weather?lat=51.481846&lon=7.216236&appid=d1ffef114ff90bd71199fb1b8d279642')
