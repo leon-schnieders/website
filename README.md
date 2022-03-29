@@ -13,7 +13,8 @@ jojojo
   var weather_data;
   
   function getWether(){  
-    weather_p.inner_HTML =  weather_data.toString();
+    var t = weather_p.visibility;
+    weather_p.inner_HTML =  t;
   }
   
   fetch('https://api.openweathermap.org/data/2.5/weather?lat=51.481846&lon=7.216236&appid=d1ffef114ff90bd71199fb1b8d279642')
