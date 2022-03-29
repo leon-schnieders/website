@@ -12,8 +12,8 @@ jojojo
   
   var weather_data;
   
-  function getWether(){  
-    var t = "Wetter in " + weather_p.name.toString() + " : " + weather_p.weather[0].description.toString();
+  function getWether(API_data){  
+    var t = "Wetter in " + API_data.name.toString() + " : " + API_data.weather[0].description.toString();
     console.log(t);
     weather_p.innerHTML =  t;
   }
@@ -25,7 +25,7 @@ jojojo
   .then(users => {
     console.log(users);
     weather_data = users;
-    getWether();
+    getWether(users);
   });
    
   
