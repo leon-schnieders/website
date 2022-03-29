@@ -1,4 +1,4 @@
 # website
 jojojo
 
-<h1> wuz up <h/1>
+<h1> wuz up </h1>
