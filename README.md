@@ -18,19 +18,21 @@ jojojo
     weather_p.innerHTML =  t;
   }
   
-  function fetchWeather(){
+  function fetchWeather(my_lat , my_lon){
       
     var lat = 51.48184;
   
     var lon = 7.216236;
   
-    var fetch_url: 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '6&lon=' + lon + '&appid=d1ffef114ff90bd71199fb1b8d279642';
+  
+    var fetch_url= 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '6&lon=' + lon + '&appid=d1ffef114ff90bd71199fb1b8d279642';
   
     fetch(fetch_url)
     .then(response => {
       return response.json();
     })
     .then(users => {
+      console.log(Wetter);
       console.log(users);
       weather_data = users;
       getWether(users);
@@ -45,6 +47,7 @@ jojojo
       return response.json();
     })
     .then(users => {
+      console.log(Location);
       console.log(users);
     });
   }
