@@ -24,7 +24,7 @@ jojojo
     getWether();
   });
   
- 
+ console.log(weather_data);  
   
   console.log("pass");
 </script>
