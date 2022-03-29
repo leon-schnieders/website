@@ -13,7 +13,8 @@ jojojo
   var weather_data;
   
   function getWether(){  
-    var t = weather_p.visibility;
+    var t = "Wetter in " + weather_p.name + " : " + weather_p.weather[0].description;
+    console.log(t);
     weather_p.innerHTML =  t;
   }
   
