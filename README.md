@@ -19,5 +19,7 @@ jojojo
   
   console.log(users);
   
+  console.log(users.base);
+  
   console.log("pass");
 </script>
