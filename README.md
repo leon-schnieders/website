@@ -13,7 +13,7 @@ jojojo
   var weather_data;
   
   function getWether(API_data){  
-    var t = "Wetter in " + API_data.name.toString() + " : " + API_data.weather[0].description.toString();
+    var t = "Wetter in " + API_data.name + " : " + API_data.weather[0].description;
     console.log(t);
     weather_p.innerHTML =  t;
   }
