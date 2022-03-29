@@ -33,7 +33,7 @@ jojojo
   fetchWeather();
   
   function fetchLocation(){
-    fetch('http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=d1ffef114ff90bd71199fb1b8d279642')
+    fetch('https://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=d1ffef114ff90bd71199fb1b8d279642')
     .then(response => {
       return response.json();
     })
