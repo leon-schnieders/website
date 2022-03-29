@@ -32,7 +32,7 @@ jojojo
   
     console.log(fetch_url.toString());
     
-    fetch(fetch_url.toString())
+    fetch(fetch_url)
     .then(response => {
       return response.json();
     })
