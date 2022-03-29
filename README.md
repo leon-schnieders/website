@@ -13,4 +13,6 @@ jojojo
   .then(users => {
     console.log(users);
   });
+  
+  console.log("pass");
 </script>
