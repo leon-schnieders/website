@@ -7,9 +7,11 @@
     
     <h1> User Info </h1>
 
+    <input type="text" id="name" value="Leon">
+    
     <input type="text" id="city" value="Bochum">
     
-    <button onclick="fetchLocation()">Lets Go</button>
+    <button onclick="fetchData()">Lets Go</button>
   
     <h2> Wetter </h2>
   
@@ -58,11 +60,8 @@
       });
     }
   
-    fetchWeather();
-  
 
     var my_location;
-    
     
     function fetchLocation(){
       
@@ -87,7 +86,10 @@
       });
     }
     
-    fetchLocation();
+    function fetchData(){
+      fetchLocation();
+    }
+   
   
   </script>
 </body>
