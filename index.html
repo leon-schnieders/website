@@ -18,6 +18,10 @@
     <h2> Wetter </h2>
   
     <p id="weather_text"> hmm </p>
+    
+    <h2> Person </h2>
+    
+    <p id="age_text"> hmm </p>
 
   </div>
 
@@ -65,11 +69,10 @@
 
     var my_location;
     
-    function fetchLocation(){
+    function fetchLocation(city_name){
       
-      var city_name = document.getElementById("city").value;
       
-      if (city_name == null){ 
+      if (typeof city_name == "undefined"){ 
         console.log("keine city");
         city_name = "Bochum";
       }
@@ -88,9 +91,19 @@
       });
     }
     
-    function fetchData(){
-      fetchLocation();
+    function fetchAge(){
+      
     }
+    
+    
+    function fetchData(){
+      
+      var city_name = document.getElementById("city").value;
+      
+      fetchLocation(city_name);
+    }
+    
+    
    
   
   </script>
