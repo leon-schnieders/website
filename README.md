@@ -29,9 +29,7 @@ jojojo
     if( typeof my_lon !== "undefined") { lon = my_lon; }
   
     var fetch_url = 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '6&lon=' + lon + '&appid=d1ffef114ff90bd71199fb1b8d279642';
-  
-    console.log(fetch_url.toString());
-    
+      
     fetch(fetch_url)
     .then(response => {
       return response.json();
@@ -44,16 +42,20 @@ jojojo
     });
   }
   
-  fetchWeather();
+  // fetchWeather();
+  
+  var location;
   
   function fetchLocation(){
-    fetch('https://api.openweathermap.org/geo/1.0/direct?q=Bochum&limit=5&appid=d1ffef114ff90bd71199fb1b8d279642')
+    fetch('https://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=d1ffef114ff90bd71199fb1b8d279642')
     .then(response => {
       return response.json();
     })
     .then(users => {
       console.log("Location");
       console.log(users);
+      location = users[0];
+      fetchWeather(location.lat,location.lon);
     });
   }
   
