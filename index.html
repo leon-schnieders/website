@@ -34,7 +34,7 @@
     
     <p id="age_text"> hmm </p>
     
-    <h2> Person </h2>
+    <h2> Joke </h2>
     
     <p id="joke_text"> hmm </p>
 
@@ -139,8 +139,6 @@
     var joke_p = document.getElementById("joke_text");
     
     function fetchJoke(dark){
-    
-      var fetch_url = 'https://api.agify.io?name=' + person_name;
       
       fetch('https://v2.jokeapi.dev/joke/Any')
       .then(response => { 
