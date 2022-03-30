@@ -32,6 +32,10 @@
     <h2> Person </h2>
     
     <p id="age_text"> hmm </p>
+    
+    <h2> Person </h2>
+    
+    <p id="joke_text"> hmm </p>
 
   </div>
 
@@ -131,6 +135,27 @@
       
     }
     
+    var joke_p = document.getElementById("joke_text");
+    
+    function fetchJoke(dark){
+    
+      var fetch_url = 'https://api.agify.io?name=' + person_name;
+      
+      fetch('https://v2.jokeapi.dev/joke/Any')
+      .then(response => { 
+        return response.json();              
+      })
+      .then(users => {
+        console.log("Name");
+        console.log(users);
+        if (dark != users.safe){
+          joke_p.innerHTML = users.setup + " | " + users.delivery;
+        } else { fetchJoke(dark); }
+      });
+      
+    }
+    
+    
     
     function fetchData(){
       
@@ -138,11 +163,15 @@
       
       var city_name = document.getElementById("city").value;
       
-      var person_name = document.getElementById("name").value;
-      
       fetchLocation(city_name);
       
+      var person_name = document.getElementById("name").value;
+      
       fetchAge(person_name);
+      
+      var humor = document.getElementById("humor").value;
+          
+      fetchJoke(humor == "on");
     }
     
     
