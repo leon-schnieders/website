@@ -68,6 +68,11 @@
       
       var city_name = getElementById("city").value;
       
+      if (city_name == null){ 
+        console.log("keine city");
+        city_name = "Bochum";
+      }
+      
       var fetch_url ='https://api.openweathermap.org/geo/1.0/direct?q=' + city_name + '&limit=5&appid=d1ffef114ff90bd71199fb1b8d279642'
       
       fetch(fetch_url)
