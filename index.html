@@ -148,7 +148,11 @@
         console.log("Dark Joke:" + dark);
         console.log(users);
         if (dark != users.safe){
-          joke_p.innerHTML = users.setup + " | " + users.delivery;
+          if(users.type == 'twopart'){
+            joke_p.innerHTML = users.setup + " | " + users.delivery;
+          } else {
+            joke_p.innerHTML = users.joke;
+          }
         } else { fetchJoke(dark); }
       });
       
