@@ -145,7 +145,7 @@
         return response.json();              
       })
       .then(users => {
-        console.log("Name");
+        console.log("Dark Joke:" + dark);
         console.log(users);
         if (dark != users.safe){
           joke_p.innerHTML = users.setup + " | " + users.delivery;
