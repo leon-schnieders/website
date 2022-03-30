@@ -10,7 +10,7 @@
     
     <h1> User Info </h1>
 
-    <div>
+    <div class="form" >
       
       <label for="fname">Vorame:</label><br>
       <input type="text" id="name" value="Leon"><br>
@@ -20,7 +20,7 @@
     
       <button onclick="fetchData()">Lets Go</button>
     
-    </form>
+    </div>
       
       
     <h2> Wetter </h2>
@@ -35,7 +35,7 @@
 
   <style>
     
-    form :is(label, input, button){
+    .form :is(label, input, button){
       pading: 5px;
       min-width: 200px;
     }
@@ -130,6 +130,8 @@
     
     
     function fetchData(){
+      
+      console.log("fetching...")
       
       var city_name = document.getElementById("city").value;
       
