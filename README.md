@@ -6,6 +6,7 @@ jojojo
 <p id="weather_text"></p>
 
 <script>
+  
   console.log("Hello world");
   
   var weather_p = document.getElementById("weather_text");
