@@ -37,7 +37,7 @@ jojojo
       return response.json();
     })
     .then(users => {
-      console.log(Wetter);
+      console.log("Wetter");
       console.log(users);
       weather_data = users;
       getWether(users);
@@ -52,7 +52,7 @@ jojojo
       return response.json();
     })
     .then(users => {
-      console.log(Location);
+      console.log("Location");
       console.log(users);
     });
   }
